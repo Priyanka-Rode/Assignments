@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    /* Tooltip hover style for attribute info */
+    .hover-attr {
+        display: inline-block;
+        margin-left: 6px;
+        color: #4e9af1;
+        background: #eaf4ff;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        text-align: center;
+        font-size: 1rem;
+        cursor: pointer;
+        position: relative;
+        transition: background 0.2s, color 0.2s;
+    }
+    .hover-attr:hover, .hover-attr:focus {
+        background: #4e9af1;
+        color: #fff;
+    }
+    .hover-attr::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        left: 50%;
+        top: 120%;
+        transform: translateX(-50%);
+        background: #222;
+        color: #fff;
+        padding: 7px 14px;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        white-space: pre-line;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s;
+        z-index: 10;
+        min-width: 120px;
+        max-width: 260px;
+        box-shadow: 0 2px 8px rgba(44,62,80,0.13);
+    }
+    .hover-attr:hover::after, .hover-attr:focus::after {
+        opacity: 1;
+    }
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 420px;
+            margin: 48px auto;
+            background: #fff;
+            padding: 36px 40px 28px 40px;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.12), 0 1.5px 6px rgba(52, 152, 219, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -60px; left: -60px;
+            width: 160px; height: 160px;
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            border-radius: 50%;
+            opacity: 0.25;
+            z-index: 0;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 28px;
+            color: #2d3a4b;
+            font-size: 2.1rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+            z-index: 1;
+            position: relative;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            z-index: 1;
+            position: relative;
+        }
+        label {
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #3a4a5d;
+            font-size: 1.05rem;
+        }
+        input, select {
+            padding: 12px 14px;
+            border: 1.5px solid #d1e3f6;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            background: #f7fbff;
+            transition: border 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+        input:focus, select:focus {
+            border: 1.5px solid #6bb9f7;
+            box-shadow: 0 0 0 2px #e3f1fd;
+        }
+        input[type="file"] {
+            background: #fff;
+            border: none;
+            padding: 0;
+        }
+        input[type="submit"] {
+            background: linear-gradient(90deg, #6bb9f7 0%, #4e9af1 100%);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            padding: 13px 0;
+            margin-top: 10px;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.08);
+            transition: background 0.2s, transform 0.1s;
+        }
+        input[type="submit"]:hover {
+            background: linear-gradient(90deg, #4e9af1 0%, #6bb9f7 100%);
+            transform: translateY(-2px) scale(1.02);
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px 4vw 16px 4vw;
+                max-width: 98vw;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
+            input, select {
+                font-size: 0.98rem;
+                padding: 10px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form 
+            action="submit_registration.php" 
+            method="post" 
+            enctype="multipart/form-data"
+            autocomplete="on"
+            novalidate
+            target="_self"
+            name="registrationForm"
+            id="registrationForm"
+            accept-charset="UTF-8"
+            rel="noopener"
+        >
+            <label for="username">Username:</label>
+            <label for="username">Username:
+                <span class="hover-attr" tabindex="0" data-tooltip="type='text'\nrequired\nminlength=3\nmaxlength=20\nautocomplete='username'">&#9432;</span>
+            </label>
+            <input type="text" id="username" name="username" required minlength="3" maxlength="20" autocomplete="username">
+
+            <label for="email">Email:</label>
+            <label for="email">Email:
+                <span class="hover-attr" tabindex="0" data-tooltip="type='email'\nrequired\nautocomplete='email'">&#9432;</span>
+            </label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+
+            <label for="password">Password:</label>
+            <label for="password">Password:
+                <span class="hover-attr" tabindex="0" data-tooltip="type='password'\nrequired\nminlength=6\nautocomplete='new-password'">&#9432;</span>
+            </label>
+            <input type="password" id="password" name="password" required minlength="6" autocomplete="new-password">
+
+            <label for="gender">Gender:</label>
+            <label for="gender">Gender:
+                <span class="hover-attr" tabindex="0" data-tooltip="select\nrequired">&#9432;</span>
+            </label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="dob">Date of Birth:</label>
+            <label for="dob">Date of Birth:
+                <span class="hover-attr" tabindex="0" data-tooltip="type='date'\nrequired">&#9432;</span>
+            </label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="profile">Profile Picture:</label>
+            <label for="profile">Profile Picture:
+                <span class="hover-attr" tabindex="0" data-tooltip="type='file'\naccept='image/*'">&#9432;</span>
+            </label>
+            <input type="file" id="profile" name="profile" accept="image/*">
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
