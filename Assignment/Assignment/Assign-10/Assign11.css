@@ -1,0 +1,47 @@
+/* 1️⃣ Universal Selector — applies to ALL elements */
+* {
+  font-family: Arial, sans-serif;
+  margin: 5px;
+  padding: 5px;
+}
+
+/* 2️⃣ Type Selector — targets a specific element type */
+p {
+  color: #333;
+  font-size: 18px;
+}
+
+/* 3️⃣ Class Selector — targets elements with a specific class */
+.highlight {
+  color: white;
+  background-color: #007bff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* 4️⃣ ID Selector — targets one unique element with a specific ID */
+#unique-box {
+  background-color: #ffebcc;
+  border: 2px solid #ff9800;
+  padding: 10px;
+  width: 300px;
+  border-radius: 6px;
+}
+
+/* 5️⃣ Attribute Selectors — style elements based on attributes */
+
+/* a) Any element with an href attribute */
+[a] {
+  color: darkred;
+  text-decoration: none;
+}
+
+/* b) Specific attribute value */
+input[type="text"] {
+  border: 2px solid green;
+}
+
+/* c) Another attribute value */
+input[type="email"] {
+  border: 2px solid blue;
+}

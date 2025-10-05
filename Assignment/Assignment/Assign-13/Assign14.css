@@ -1,0 +1,38 @@
+/* General Page Styling */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f8f9fa;
+  margin: 40px;
+}
+
+/* Box Model Demonstration */
+.box {
+  background-color: #e9f7ef;        /* Content area */
+  padding: 30px;                    /* Padding inside box */
+  border: 5px solid #28a745;        /* Border around padding */
+  margin: 40px;                     /* Space outside box */
+  width: 300px;
+  box-sizing: content-box;          /* Default box model behavior */
+}
+
+/* To visualize */
+.box p {
+  margin: 0;
+}
+
+/* Explanation section */
+.explanation {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 400px;
+  border-radius: 8px;
+}
+
+h1 {
+  color: #007bff;
+}
+
+h2 {
+  color: #28a745;
+}

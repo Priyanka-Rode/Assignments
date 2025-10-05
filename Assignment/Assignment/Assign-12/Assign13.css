@@ -1,0 +1,55 @@
+/* General styling */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 30px;
+  background-color: #f8f9fa;
+}
+
+/* 1️⃣ ::first-letter */
+.intro::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* 2️⃣ ::first-line */
+.intro::first-line {
+  text-transform: uppercase;
+  color: #28a745;
+}
+
+/* 3️⃣ ::before and ::after */
+.quote {
+  position: relative;
+  margin: 20px 0;
+  font-style: italic;
+  background-color: #fff;
+  padding: 15px 20px;
+  border-left: 5px solid #007bff;
+}
+
+/* Decorative quote marks */
+.quote::before {
+  content: "“";
+  font-size: 2em;
+  color: #007bff;
+  margin-right: 5px;
+}
+.quote::after {
+  content: "”";
+  font-size: 2em;
+  color: #007bff;
+  margin-left: 5px;
+}
+
+/* 4️⃣ ::marker for list bullets */
+ul li::marker {
+  color: #ff6600;
+  font-size: 1.3em;
+}
+
+/* 5️⃣ ::selection */
+::selection {
+  background-color: #ffeeba;
+  color: #212529;
+}
