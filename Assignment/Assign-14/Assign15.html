@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Overflow Handling Example</title>
+  <link rel="stylesheet" href="overflow.css">
+</head>
+<body>
+  <h1>CSS Overflow Handling Demonstration</h1>
+
+  <div class="container visible">
+    <h3>overflow: visible (default)</h3>
+    <p>
+      The content is not clipped and may overflow outside the box. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere eros quis magna luctus, nec sodales sem convallis.
+    </p>
+  </div>
+
+  <div class="container hidden">
+    <h3>overflow: hidden</h3>
+    <p>
+      The overflowing content is hidden and not accessible. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim magna nec odio imperdiet, id hendrerit justo egestas.
+    </p>
+  </div>
+
+  <div class="container scroll">
+    <h3>overflow: scroll</h3>
+    <p>
+      Always adds scrollbars, even if not needed. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate augue ac nisl ullamcorper, a vehicula metus blandit.
+      Donec ut risus vitae nisl tristique tempus. Sed eget velit ac arcu gravida blandit. Integer congue diam in odio cursus dictum.
+    </p>
+  </div>
+
+  <div class="container auto">
+    <h3>overflow: auto</h3>
+    <p>
+      Adds scrollbars only when content overflows. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel nisi non mi pharetra ultrices. Suspendisse ut turpis vel est porttitor pulvinar.
+      Donec mattis fermentum magna, nec egestas justo tincidunt vel. Vivamus nec sem ut velit tincidunt venenatis.
+    </p>
+  </div>
+</body>
+</html>
