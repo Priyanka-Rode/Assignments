@@ -1,0 +1,21 @@
+   /* Apply font to all elements */
+    * {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    p {
+      font-weight: 400;
+      line-height: 1.6;
+    }

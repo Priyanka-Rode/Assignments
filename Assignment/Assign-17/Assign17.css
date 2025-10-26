@@ -1,0 +1,47 @@
+ body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    /* Basic text shadow */
+    h1 {
+      color: #333;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Multiple shadows for a 3D effect */
+    h2 {
+      color: #ff6600;
+      text-shadow: 
+        1px 1px 0 #000,
+        2px 2px 0 #555,
+        3px 3px 0 #aaa;
+    }
+
+    /* Neon glow effect */
+    h3 {
+      color: #0ff;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+    }
+
+    /* Subtle shadow for paragraphs */
+    p {
+      text-shadow: 1px 1px 2px #ccc;
+    }
+
+    /* Additional text effects */
+    .uppercase {
+      text-transform: uppercase;
+    }
+
+    .letter-spacing {
+      letter-spacing: 5px;
+    }
+
+    .word-spacing {
+      word-spacing: 10px;
+    }
+
+    .line-height {
+      line-height: 2;
+    }

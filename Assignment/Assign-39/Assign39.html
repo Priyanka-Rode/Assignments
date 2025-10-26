@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Loop Statements</title>
+  <script>
+    // 1️⃣ for loop
+    console.log("1. For Loop:");
+    for (let i = 1; i <= 5; i++) {
+      console.log("For loop iteration:", i);
+    }
+
+    // 2️⃣ while loop
+    console.log("2. While Loop:");
+    let j = 1;
+    while (j <= 5) {
+      console.log("While loop iteration:", j);
+      j++;
+    }
+
+    // 3️⃣ do...while loop
+    console.log("3. Do...While Loop:");
+    let k = 1;
+    do {
+      console.log("Do...While loop iteration:", k);
+      k++;
+    } while (k <= 5);
+
+    // 4️⃣ for...of loop (used for iterable objects like arrays)
+    console.log("4. For...Of Loop:");
+    let fruits = ["Apple", "Banana", "Cherry"];
+    for (let fruit of fruits) {
+      console.log(fruit);
+    }
+
+    // 5️⃣ for...in loop (used for object properties)
+    console.log("5. For...In Loop:");
+    let person = {name: "John", age: 30, city: "New York"};
+    for (let key in person) {
+      console.log(key + ":", person[key]);
+    }
+
+  </script>
+</head>
+<body>
+  <h2>Open the console to see all loop statements in action</h2>
+</body>
+</html>
