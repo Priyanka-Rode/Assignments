@@ -1,0 +1,109 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+  <h1>User Registration Form</h1>
+
+  <form 
+    action="#" 
+    method="post" 
+    enctype="multipart/form-data" 
+    autocomplete="on"
+    name="registrationForm"
+>
+    <label for="fullname">Full Name:</label><br />
+    <input 
+      type="text" 
+      id="fullname" 
+      name="fullname" 
+      placeholder="Enter your full name" 
+      required 
+      maxlength="50"
+    /><br /><br />
+
+
+    <label for="username">Username:</label><br />
+    <input 
+      type="text" 
+      id="username" 
+      name="username" 
+      placeholder="Choose a username" 
+      pattern="[A-Za-z0-9_]{5,15}" 
+      title="Username should be 5–15 characters and may include letters, numbers, and underscores."
+      required
+    /><br /><br />
+
+    <label for="email">Email:</label><br />
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="Enter your email address" 
+      required 
+      autocomplete="email"
+    /><br /><br />
+
+    <label for="password">Password:</label><br />
+    <input 
+      type="password" 
+      id="password" 
+      name="password" 
+      placeholder="Create a strong password" 
+      required 
+      minlength="8"
+      maxlength="20"
+    /><br /><br />
+
+  
+    <label for="age">Age:</label><br />
+    <input 
+      type="number" 
+      id="age" 
+      name="age" 
+      min="18" 
+      max="100" 
+      placeholder="Enter your age"
+      required
+    /><br /><br />
+
+    <label>Gender:</label><br />
+    <input type="radio" id="male" name="gender" value="Male" required />
+    <label for="male">Male</label><br />
+    <input type="radio" id="female" name="gender" value="Female" />
+    <label for="female">Female</label><br />
+    <input type="radio" id="other" name="gender" value="Other" />
+    <label for="other">Other</label><br /><br />
+
+    <label for="country">Country:</label><br />
+    <select id="country" name="country" required>
+      <option value="">--Select Country--</option>
+      <option value="USA">USA</option>
+      <option value="UK">UK</option>
+      <option value="Canada">Canada</option>
+      <option value="India">India</option>
+    </select><br /><br />
+
+  
+    <label for="photo">Upload Profile Picture:</label><br />
+    <input type="file" id="photo" name="photo" accept="image/*" /><br /><br />
+
+    
+    <label for="refcode">Referral Code (readonly example):</label><br />
+    <input type="text" id="refcode" name="refcode" value="REF12345" readonly /><br /><br />
+
+    <label for="promo">Promo Code (disabled example):</label><br />
+    <input type="text" id="promo" name="promo" value="PROMO2025" disabled /><br /><br />
+
+    <input type="checkbox" id="terms" name="terms" required />
+    <label for="terms">I agree to the terms and conditions</label><br /><br />
+
+   
+    <input type="submit" value="Register" />
+    <input type="reset" value="Clear Form" />
+  </form>
+ </body>
+ </html>

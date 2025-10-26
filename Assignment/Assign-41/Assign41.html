@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Utility Functions</title>
+  <script>
+    // 1️⃣ Function to get the maximum of two numbers
+    function getMax(a, b) {
+      return (a > b) ? a : b;
+    }
+
+    // 2️⃣ Function to check if a number is even
+    function isEven(num) {
+      return num % 2 === 0;
+    }
+
+    // 3️⃣ Function to capitalize the first letter of a string
+    function capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    // 4️⃣ Function to generate a random number between min and max
+    function getRandom(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    // 5️⃣ Function to calculate the factorial of a number
+    function factorial(n) {
+      if (n === 0 || n === 1) return 1;
+      let fact = 1;
+      for (let i = 2; i <= n; i++) {
+        fact *= i;
+      }
+      return fact;
+    }
+
+    // Using the utility functions
+    console.log("Max of 10 and 20:", getMax(10, 20));
+    console.log("Is 7 even?", isEven(7));
+    console.log("Capitalize 'hello':", capitalize("hello"));
+    console.log("Random number between 1 and 100:", getRandom(1, 100));
+    console.log("Factorial of 5:", factorial(5));
+  </script>
+</head>
+<body>
+  <h2>Open the console to see the utility function outputs</h2>
+</body>
+</html>

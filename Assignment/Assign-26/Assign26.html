@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Functions Example</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS Variables for reuse */
+    :root {
+      --primary-color: #ff6600;
+      --primary-hover: #e65c00;
+      --bg-color: #f9f9f9;
+      --card-bg: #ffffff;
+      --card-border: #ddd;
+      --text-color: #333;
+      --subtext-color: #555;
+      --font-family: 'Roboto', sans-serif;
+      --card-radius: 10px;
+    }
+
+    * {
+      font-family: var(--font-family);
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: var(--text-color);
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .product-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--card-radius);
+
+      /* 1️⃣ Using calc() for dynamic width */
+      width: calc(250px + 2 * 10px); /* card width + padding */
+
+      padding: 10px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .product-card img {
+      /* 2️⃣ Using min(), max(), clamp() to make image responsive */
+      width: clamp(200px, 80%, 300px);
+      height: auto;
+      border-radius: var(--card-radius);
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .product-card h2 {
+      font-size: 1.2rem; /* Using rem unit */
+      margin-bottom: 10px;
+      text-align: center;
+
+      /* 3️⃣ Using rgb() function for color */
+      color: rgb(51, 51, 51);
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      color: hsl(0, 0%, 35%); /* 4️⃣ Using hsl() function */
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .product-card .price {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 15px;
+      color: var(--text-color);
+    }
+
+    .product-card button {
+      padding: 10px 20px;
+
+      /* 5️⃣ Using var() function for colors */
+      background-color: var(--primary-color);
+      color: white;
+
+      font-size: 0.9rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .product-card button:hover {
+      background-color: var(--primary-hover);
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .product-card { width: calc(45% - 20px); } /* Using calc() */
+    }
+
+    @media (max-width: 480px) {
+      .product-card { width: 100%; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Product Grid with CSS Functions</h1>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/250x200" alt="Product 1">
+      <h2>Product 1</h2>
+      <p>High-quality product with excellent features.</p>
+      <div class="price">$49.99</div>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/250x200" alt="Product 2">
+      <h2>Product 2</h2>
+      <p>Durable and stylish product for everyday use.</p>
+      <div class="price">$59.99</div>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/250x200" alt="Product 3">
+      <h2>Product 3</h2>
+      <p>Premium quality and exceptional design.</p>
+      <div class="price">$79.99</div>
+      <button>Buy Now</button>
+    </div>
+  </div>
+
+</body>
+</html>

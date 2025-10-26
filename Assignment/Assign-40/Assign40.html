@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop Statements with Break and Continue</title>
+  <script>
+    // 1️⃣ for loop with break
+    console.log("For Loop with break:");
+    for (let i = 1; i <= 10; i++) {
+      if (i === 6) {
+        console.log("Break at i =", i);
+        break; // exits the loop when i is 6
+      }
+      console.log(i);
+    }
+
+    // 2️⃣ for loop with continue
+    console.log("\nFor Loop with continue:");
+    for (let i = 1; i <= 5; i++) {
+      if (i === 3) {
+        console.log("Skipping i =", i);
+        continue; // skips the current iteration when i is 3
+      }
+      console.log(i);
+    }
+
+    // 3️⃣ while loop with break
+    console.log("\nWhile Loop with break:");
+    let j = 1;
+    while (j <= 10) {
+      if (j === 7) {
+        console.log("Break at j =", j);
+        break; // exits the loop when j is 7
+      }
+      console.log(j);
+      j++;
+    }
+
+    // 4️⃣ while loop with continue
+    console.log("\nWhile Loop with continue:");
+    let k = 1;
+    while (k <= 5) {
+      if (k === 4) {
+        console.log("Skipping k =", k);
+        k++;
+        continue; // skips current iteration when k is 4
+      }
+      console.log(k);
+      k++;
+    }
+
+    // 5️⃣ do...while loop with break
+    console.log("\nDo...While Loop with break:");
+    let m = 1;
+    do {
+      if (m === 5) {
+        console.log("Break at m =", m);
+        break; // exits the loop when m is 5
+      }
+      console.log(m);
+      m++;
+    } while (m <= 10);
+
+    // 6️⃣ do...while loop with continue
+    console.log("\nDo...While Loop with continue:");
+    let n = 1;
+    do {
+      if (n === 3) {
+        console.log("Skipping n =", n);
+        n++;
+        continue; // skips current iteration when n is 3
+      }
+      console.log(n);
+      n++;
+    } while (n <= 5);
+
+  </script>
+</head>
+<body>
+  <h2>Open the console to see loops with break and continue</h2>
+</body>
+</html>
